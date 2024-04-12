@@ -25,6 +25,9 @@ class Ui_Form2(object):
         self.label = QLabel(Form)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(20, 20, 361, 41))
+        font = QFont()
+        font.setPointSize(14)
+        self.label.setFont(font)
 
         self.retranslateUi(Form)
 
