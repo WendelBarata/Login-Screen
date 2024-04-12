@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>415</width>
-    <height>512</height>
+    <height>274</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,124 +20,279 @@
       <x>30</x>
       <y>20</y>
       <width>361</width>
-      <height>461</height>
+      <height>241</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background:  blue
-</string>
+     <string notr="true">QWidget#widget {
+background: rgb(0, 11, 26);
+border-radius: 10px;
+}</string>
     </property>
     <widget class="QPushButton" name="btnLogin">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>390</y>
-       <width>141</width>
-       <height>51</height>
+       <x>180</x>
+       <y>185</y>
+       <width>71</width>
+       <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgb(13, 134, 255);
+border: none; 
+color: rgb(200, 200, 210);
+font-size: 18px; 
+border-radius: 4px;
+</string>
+     </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>Login</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btnCancel">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>390</y>
-       <width>141</width>
-       <height>51</height>
+       <x>260</x>
+       <y>185</y>
+       <width>71</width>
+       <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgb(13, 134, 255);
+border: none; 
+color: rgb(200, 200, 210);
+font-size: 18px; 
+border-radius: 4px;
+</string>
+     </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>Cancel</string>
      </property>
     </widget>
     <widget class="QLabel" name="lbTitle">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>10</y>
        <width>361</width>
        <height>41</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(13, 134, 255);
+</string>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>LOGIN</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
      </property>
     </widget>
     <widget class="QLabel" name="lbName">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>80</y>
-       <width>49</width>
-       <height>16</height>
+       <x>21</x>
+       <y>60</y>
+       <width>51</width>
+       <height>41</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#lbName {
+	image: url(:/icons_app/user_icon.png);
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom: 2px solid rgba(240, 244, 250, 200);
+    padding-bottom: 7px;
+    background: rgb(0, 22, 50);
+}</string>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="lbPassword">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>150</y>
+       <x>21</x>
+       <y>120</y>
        <width>49</width>
-       <height>16</height>
+       <height>41</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#lbPassword {
+    image: url(:/icons_app/password_icon.png);
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom: 2px solid rgba(240, 244, 250, 200);
+    padding-bottom: 7px;
+    background: rgb(0, 22, 50);
+}</string>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="lbSecretCode">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>340</y>
+       <x>21</x>
+       <y>180</y>
        <width>49</width>
-       <height>16</height>
+       <height>41</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#lbSecretCode {
+    image: url(:/icons_app/secretcode_icon.png);
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom: 2px solid rgba(240, 244, 250, 200);
+    padding-bottom: 7px;
+    background: rgb(0, 22, 50);
+}</string>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLineEdit" name="leName">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>90</y>
-       <width>113</width>
-       <height>22</height>
+       <x>70</x>
+       <y>60</y>
+       <width>261</width>
+       <height>41</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit#leName {
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom: 2px solid rgba(240, 244, 250, 200);
+    font-size: 14px;
+    color: rgb(240, 244, 250);
+    padding-bottom: 7px;
+    background: rgb(0, 22, 50);
+}
+
+QLineEdit#leName:focus {
+    border-color: rgb(13, 134, 255);
+}
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Type your user</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lePassword">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>150</y>
-       <width>113</width>
-       <height>22</height>
+       <x>70</x>
+       <y>120</y>
+       <width>261</width>
+       <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit#lePassword {
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom: 2px solid rgba(240, 244, 250, 200);
+    font-size: 14px;
+    color: rgb(240, 244, 250);
+    padding-bottom: 7px;
+    background: rgb(0, 22, 50);
+}
+
+QLineEdit#lePassword:focus {
+    border-color: rgb(13, 134, 255);
+}
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Type your password</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="leSecretCode">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>340</y>
-       <width>113</width>
-       <height>22</height>
+       <x>70</x>
+       <y>180</y>
+       <width>101</width>
+       <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit#leSecretCode {
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom: 2px solid rgba(240, 244, 250, 200);
+    font-size: 14px;
+    color: rgb(240, 244, 250);
+    padding-bottom: 7px;
+    background: rgb(0, 22, 50);
+}
+
+QLineEdit#leSecretCode:focus {
+    border-color: rgb(13, 134, 255);
+}
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Secret Code</string>
      </property>
     </widget>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../images/icons.qrc"/>
+ </resources>
  <connections/>
 </ui>
