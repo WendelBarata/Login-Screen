@@ -30,7 +30,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.widget = QWidget(self.centralwidget)
         self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(30, 20, 361, 241))
+        self.widget.setGeometry(QRect(30, 10, 361, 251))
         self.widget.setStyleSheet(u"QWidget#widget {\n"
 "background: rgb(0, 11, 26);\n"
 "border-radius: 10px;\n"
@@ -163,6 +163,11 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.leSecretCode.setEchoMode(QLineEdit.EchoMode.Password)
+        self.lbStatusBar = QLabel(self.widget)
+        self.lbStatusBar.setObjectName(u"lbStatusBar")
+        self.lbStatusBar.setGeometry(QRect(0, 225, 361, 20))
+        self.lbStatusBar.setStyleSheet(u"color: rgb(240, 244, 250);")
+        self.lbStatusBar.setAlignment(Qt.AlignmentFlag.AlignCenter)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -181,5 +186,6 @@ class Ui_MainWindow(object):
         self.leName.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type your user", None))
         self.lePassword.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type your password", None))
         self.leSecretCode.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Secret Code", None))
+        self.lbStatusBar.setText("")
     # retranslateUi
 

@@ -2,9 +2,9 @@ import sys
 from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget,
                                QLabel, QLineEdit)
 from PySide6.QtGui import QShortcut, QKeySequence
-from LoginScreen import Ui_MainWindow
-from LimitedScreen import Ui_Form
-from UnlimitedScreen import Ui_Form2
+from LoginScreen import Ui_MainWindow  # Import the login screen interface
+from LimitedScreen import Ui_Form  # Import the limited screen interface
+from UnlimitedScreen import Ui_Form2  # Import the unlimited screen interface
 
 
 class TelaLogin(QMainWindow, Ui_MainWindow):
@@ -12,17 +12,21 @@ class TelaLogin(QMainWindow, Ui_MainWindow):
         super().__init__(parent)
         super().setupUi(self)
 
+        # Shortcut to show the secret code
         self.shortcut = QShortcut(QKeySequence("Ctrl+Shift+Up"), self)
         self.shortcut.activated.connect(self.secretCodeVisible)
 
         self.setWindowTitle("Login")
-        self.lbSecretCode.setVisible(False)
-        self.leSecretCode.setVisible(False)
+        self.lbSecretCode.setVisible(False)  # Initially hide the secret code
+        self.leSecretCode.setVisible(False)  # Initially hide the secret code
 
+        # Connect buttons to corresponding methods
         self.btnLogin.clicked.connect(self.login)
         self.btnCancel.clicked.connect(self.quitApp)
 
     def secretCodeVisible(self):
+        # Make the secret code label and
+        # field visible when the shortcut is triggered
         self.lbSecretCode.setVisible(True)
         self.leSecretCode.setVisible(True)
 
@@ -30,6 +34,9 @@ class TelaLogin(QMainWindow, Ui_MainWindow):
         name = self.leName.text()
         password = self.lePassword.text()
         secretCode = self.leSecretCode.text()
+        secretCodeCheckVisible = self.leSecretCode.isVisible()
+
+        # Check credentials and redirect to appropriate screens
 
         # Change this screen to your most accessible screen
         if name == "admin" and password == "admin" and secretCode == "secret":
@@ -37,11 +44,28 @@ class TelaLogin(QMainWindow, Ui_MainWindow):
             self.windowUnlimited = UnlimitedScreen()
             self.windowUnlimited.show()
 
+        elif (name == "admin" and
+              password == "admin" and
+              secretCode != "secret" and
+              secretCodeCheckVisible):
+
+            self.lbStatusBar.setText("Incorrect Secret Code")
+
+        elif (name != "admin" and
+              password != "admin" and
+              secretCode == "secret" and
+              secretCodeCheckVisible):
+
+            self.lbStatusBar.setText("Incorrect User or Password")
+
         # Change this screen to your screen that has less access
         elif name == "admin" and password == "admin":
             self.close()
             self.windowLimited = LimitedScreen()
             self.windowLimited.show()
+
+        else:
+            self.lbStatusBar.setText("Invalid Credentials")
 
     def quitApp(self):
         QApplication.quit()
