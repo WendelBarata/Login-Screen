@@ -2,9 +2,12 @@ import sys
 from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget,
                                QLabel, QLineEdit)
 from PySide6.QtGui import QShortcut, QKeySequence
-from LoginScreen import Ui_MainWindow  # Import the login screen interface
-from LimitedScreen import Ui_Form  # Import the limited screen interface
-from UnlimitedScreen import Ui_Form2  # Import the unlimited screen interface
+# Import the login screen interface
+from interface.py.LoginScreen import Ui_MainWindow
+# Import the limited screen interface
+from interface.py.LimitedScreen import Ui_Form
+# Import the unlimited screen interface
+from interface.py.UnlimitedScreen import Ui_Form2
 
 
 class TelaLogin(QMainWindow, Ui_MainWindow):
